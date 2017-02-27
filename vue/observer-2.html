@@ -5,11 +5,31 @@
   <title>Document</title>
 </head>
 <body>
-<p>控制台输入：</p>
-<p>app1.data.name;</p>
-<p>app1.data.age = 100;</p>
-<p>app2.data.university;</p>
-<p>app2.data.major = 'science';</p>
+<h1>控制台输入1：</h1>
+let observer21 = new Observer({</br>
+         name: 'youngwind',</br>
+         age: 25</br>
+ });</br>
+
+ observer21.data.name = {</br>
+         lastName: 'liang',</br>
+         firstName: 'shaofeng'</br>
+ };</br>
+
+ observer21.data.name.lastName;</br>
+ observer21.data.name.firstName = 'lalala';</br>
+
+<h1>控制台输入2：</h1>
+let observer22 = new Observer({</br>
+         name: 'youngwind',</br>
+         age: 25</br>
+ });</br>
+
+ observer22.$watch('age', function(age) {</br>
+         console.log(`我的年纪变了，现在已经是：${age}岁了`)</br>
+ });</br>
+
+ observer22.data.age = 100;</br>
 
   <script type="text/javascript" src="./observer-2.js"></script>
   <script type="text/javascript">
